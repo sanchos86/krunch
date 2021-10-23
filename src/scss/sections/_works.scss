@@ -1,0 +1,109 @@
+.works {
+    padding: 120px 0;
+    &__heading {
+        @include stn-heading();
+    }
+    &__description {
+        @include stn-description();
+    }
+    &__filters {
+        display: flex;
+        justify-content: center;
+        margin: 70px 15px 40px;
+        .filter {
+            padding-bottom: 5px;
+            margin: 0 10px;
+            &:hover {
+                cursor: pointer;
+            }
+            &.mixitup-control-active {
+                color: $blue;
+                border-bottom: 1px solid $blue;
+            }
+        }
+    }
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__question {
+        margin: 60px 15px 25px;
+        color: $dark;
+        font: {
+            family: $oItalic;
+            size: 25px;
+        }
+    }
+    &__link {
+        @include blue-button($bg-c: transparent, $color: $dark);
+        &:hover {
+            background-color: $blue;
+            color: $white;
+        }
+    }
+}
+
+.works-item {
+    display: block;
+    width: 25%;
+    position: relative;
+    &__overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(76, 140, 245, .85);
+        opacity: 0;
+        color: $white;
+        transition: .3s all;
+    }
+    &__info {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &__post {
+        text-transform: uppercase;
+        line-height: 30px;
+        font: {
+            family: $nRegular;
+            size: 18px;
+        }
+    }
+    &__type {
+        font-size: 15px;
+        line-height: 25px;
+    }
+    &__image {
+        width: 100%;
+        display: block;
+    }
+    &:hover .works-item__overlay {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 900px) {
+    .works {
+        padding: 80px 0;
+    }
+    .works-item {
+        width: calc(33.333333333%);
+    }
+}
+
+@media (max-width: 700px) {
+    .works-item {
+        width: 50%;
+    }
+}
+
+@media (max-width: 450px) {
+    .works-item {
+        width: 100%;
+    }
+}

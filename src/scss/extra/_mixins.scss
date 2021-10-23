@@ -1,0 +1,79 @@
+@mixin font-face($fontFamily, $path, $fontWeight: 400, $fontStyle: normal) {
+    @font-face {
+        font-family: $fontFamily;
+        font-weight: $fontWeight;
+        font-style: $fontStyle;
+        font-display: swap;
+        src: url('#{$path}.woff2') format('woff2'), url('#{$path}.woff') format('woff');
+    }
+}
+
+@mixin blue-button($bg-c: $blue, $color: $white){
+    display: inline-block;
+    width: 190px;
+    height: 45px;
+    line-height: 43px;
+    background-color: $bg-c;
+    color: $color;
+    font-family: $nRegular;
+    border: 1px solid $blue;
+    border-radius: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s all;
+}
+
+@mixin container($mw: 1170px, $pd-l: 15px, $pd-r: 15px) {
+    margin: 0 auto;
+    max-width: $mw;
+    padding-right: $pd-r;
+    padding-left: $pd-l;
+}
+
+@mixin stn-heading($color: $dark) {
+    font: {
+        family: $nBold;
+        size: 28px;
+    }
+    color: $color;
+    text-transform: uppercase;
+}
+
+@mixin stn-description($color: $gray, $bg-c: #a5c5fa) {
+    color: $color;
+    margin-top: 25px;
+    padding: 0 15px;
+    font: {
+        family: $oItalic;
+        size: 16px;
+    }
+    &::after {
+        @include after-line($bg-c);
+    }
+}
+
+@mixin after-line($bg-c) {
+    background-color: $bg-c;
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    margin: 25px auto 0;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }
+}
+@mixin pl-fade-out($duration: 200ms) {
+  @include placeholder {
+    opacity: 1;
+    transition: opacity $duration;
+  }
+  &:focus {
+    @include placeholder {
+      opacity: 0;
+    }
+  }
+}

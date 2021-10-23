@@ -1,0 +1,39 @@
+.about {
+    padding: 120px 0 0;
+    &__heading {
+        @include stn-heading();
+    }
+    &__description {
+        @include stn-description();
+    }
+    &__container {
+        @include container();
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 70px;
+    }
+}
+.about-item {
+    width: calc(50% - 30px);
+    margin: 0 15px;
+    text-align: left;
+    &__text {
+        margin-bottom: 35px;
+        line-height: 24px;
+    }
+    &__picture {
+        width: 100%;
+    }
+    &__image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .about {
+        padding-top: 80px;
+    }
+    .about-item {
+        width: calc(100% - 30px);
+    }
+}

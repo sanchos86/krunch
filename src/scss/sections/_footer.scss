@@ -1,0 +1,27 @@
+.footer {
+    padding: 20px 15px;
+    background-color: $dark;
+    font-size: 11px;
+    text-transform: uppercase;
+    &__social-link {
+        display: inline-block;
+        color: $white;
+        margin: 0 10px 10px;
+        font: {
+            family: $oBold;
+            size: inherit;
+        }
+        &:hover {
+            i {
+                color: $blue;
+            }
+        }
+        i {
+            margin-right: 10px;
+            transition: .3s color;
+        }
+    }
+    &__copyright {
+        margin-top: 10px;
+    }
+}

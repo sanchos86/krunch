@@ -1,0 +1,111 @@
+.team {
+    padding-bottom: 110px;
+    &__heading {
+        @include stn-heading();
+    }
+    &__description {
+        @include stn-description();
+    }
+    &__container {
+        @include container($pd-l: 0, $pd-r: 0);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 65px;
+    }
+}
+
+.team-item {
+    width: calc(25% - 30px);
+    margin: 10px 15px;
+    &__image-holder {
+        width: 100%;
+        position: relative;
+    }
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: $blue;
+        border-radius: 3px;
+        opacity: 0;
+        transition: opacity .3s;
+    }
+    &__socials {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__social-link {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+        line-height: 30px;
+        border-radius: 2px;
+        background-color: #000;
+        color: $white;
+        font-size: 15px;
+        transition: color .3s;
+        &:hover {
+            color: $blue;
+            font-size: 15px;
+        }
+    }
+    &__picture {
+        display: inline-flex;
+        width: 100%;
+    }
+    &__image {
+        width: 100%;
+        display: block;
+    }
+    &__name {
+        font: {
+            family: $nBold;
+            size: 16px;
+        }
+        margin: 15px 0;
+        color: $dark;
+        text-transform: uppercase;
+        transition: color .3s;
+    }
+    &__post {
+        font-size: 13px;
+        transition: color .3s;
+    }
+    &:hover {
+        .team-item {
+            &__overlay {
+                opacity: .85;
+            }
+            &__name {
+                color: $blue;
+            }
+            &__post {
+                color: $dark;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .team {
+        padding: 80px 0;
+    }
+    .team-item {
+        width: calc(50% - 30px);
+        max-width: 275px;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    .team-item {
+        width: calc(100% - 30px);
+    }
+}

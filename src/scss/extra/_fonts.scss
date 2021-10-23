@@ -1,0 +1,8 @@
+@each $fontName, $fontProperties in $fonts {
+  @include font-face(
+    #{$fontName},
+    map-get($fontProperties, 'path'),
+    map-get($fontProperties, 'weight'),
+    map-get($fontProperties, 'style')
+  )
+}

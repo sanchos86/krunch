@@ -1,0 +1,65 @@
+$gray: #777777;
+$white: #ffffff;
+$dark: #222222;
+$blue: #4c8cf5;
+
+$nLight: NunitoLight;
+$nRegular: NunitoRegular;
+$nBold: NunitoBold;
+$oLight: OpenSansLight;
+$oLightItalic: OpenSansLightItalic;
+$oRegular: OpenSansRegular;
+$oItalic: OpenSansItalic;
+$oSemibold: OpenSansSemibold;
+$oBold: OpenSansBold;
+
+$fonts: (
+  Icomoon: (
+    name: 'Icomoon',
+    path: '../fonts/Icomoon/icomoon'
+  ),
+  NunitoLight: (
+    name: 'NunitoLight',
+    path: '../fonts/NunitoLight/nunito-light',
+    weight: 300
+  ),
+  NunitoRegular: (
+    name: 'NunitoRegular',
+    path: '../fonts/NunitoRegular/nunito-regular'
+  ),
+  NunitoBold: (
+    name: 'NunitoBold',
+    path: '../fonts/NunitoBold/nunito-bold',
+    weight: 700
+  ),
+  OpenSansLight: (
+    name: 'OpenSansLight',
+    path: '../fonts/OpenSansLight/opensans-light',
+    weight: 300
+  ),
+  OpenSansLightItalic: (
+    name: 'OpenSansLightItalic',
+    path: '../fonts/OpenSansLightItalic/opensans-lightitalic',
+    weight: 300,
+    style: 'italic'
+  ),
+  OpenSansRegular: (
+    name: 'OpenSansRegular',
+    path: '../fonts/OpenSansRegular/opensans-regular'
+  ),
+  OpenSansItalic: (
+    name: 'OpenSansItalic',
+    path: '../fonts/OpenSansItalic/opensans-italic',
+    style: 'italic'
+  ),
+  OpenSansSemibold: (
+    name: 'OpenSansSemibold',
+    path: '../fonts/OpenSansSemibold/opensans-semibold',
+    weight: 600
+  ),
+  OpenSansBold: (
+    name: 'OpenSansBold',
+    path: '../fonts/OpenSansBold/opensans-bold',
+    weight: 700
+  )
+);
